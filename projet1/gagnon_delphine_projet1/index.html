@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumière urbaine</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+</head>
+<body>
+    <!-- Barre de navigation --> 
+    <header>
+        <div class="logo">
+            <p class="logo__name">LUM.UR</p>
+            <p class="logo__sous-titre">Lumière urbaine</p>
+        </div>
+    <nav>
+            <ul class="navbar">
+                <li><a href="#">Programmation</a></li>
+                <li><a href="#">Horaire</a></li>
+                <li><a href="#">Artistes</a></li>
+                <li><a href="#">Billets</a></li>
+                <li><a href="#">Partenaires</a></li>
+                <li><a href="#">Témoignages</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+    </nav>
+       <button class="button__yellow">Obtenez vos Billets</button>
+    </header>
+    <main>
+        <!-- Section Hero -->
+        <div class="section__hero">
+                <h1 class="hero__title">LUMIÈRE.URBAINE</h1>
+                <p class="hero__desc">3 jours de musique et d'art immersif.</p>
+                <div class="hero__button__group">
+                    <button class="hero__button" id="hero__button__border">En savoir plus</button>
+                    <button class="hero__button" id="hero__button__primary">Acheter des billets</button>
+                </div>
+        </div>
+        <!-- Section Programmation -->
+        <div class="section">
+            <h2 class="section__title">Programmation</h2>
+            <div class="carte__prog__group"> 
+        <!--Carte Programmation-->
+                <div class="carte__prog">
+                    <div class="carte__prog__gris">
+                        <p class="carte__prog__label">Jour 1</p>
+                        <p class="prog__date__festival">Vendredi festival</p>
+                    </div>
+                    <div class="carte__prog__blanc">
+                        <h3 class="carte__prog__title">Vendredi</h3>
+                        <p class="carte__prog__desc">Liste des performances du vendredi</p>
+                    </div>
+                </div>
+                <div class="carte__prog">
+                    <div class="carte__prog__gris">
+                        <p class="carte__prog__label">Jour 2</p>
+                        <p class="prog__date__festival">Samedi festival</p>
+                    </div>
+                    <div class="carte__prog__blanc">
+                        <h3 class="carte__prog__title">Samedi</h3>
+                        <p class="carte__prog__desc">Liste des performances du samedi</p>
+                    </div>
+                </div>
+                <div class="carte__prog">
+                    <div class="carte__prog__gris">
+                        <p class="carte__prog__label">Jour 3</p>
+                        <p class="prog__date__festival">Dimanche festival</p>
+                    </div>
+                    <div class="carte__prog__blanc">
+                        <h3 class="carte__prog__title">Dimanche</h3>
+                        <p class="carte__prog__desc">Liste des performances du dimanche</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section Horaire -->
+        <div class="section__horaire section__blue">
+            <div class="horaire__title__group">
+                <h2 class="section__horaire__title">Horaire</h2>
+                <p class="horaire__desc">Consultez notre horaire des performances.</p>
+            </div>
+            <div class="horaire__carte__group">
+        <!-- Carte Horaire -->
+                <div class="carte__horaire">
+                    <div class="horaire__calendrier">
+                        <p>V</p>
+                    </div>
+                    <div class="carte__desc__group">
+                        <h3 class="carte__horaire__title">Vendredi</h3>
+                        <p class="carte__horaire__desc">Performances de 15h à 23h.</p>
+                    </div>
+                </div>
+                <div class="carte__horaire">
+                    <div class="horaire__calendrier">
+                        <p>S</p>
+                    </div>
+                    <div class="carte__desc__group">
+                        <h3 class="carte__horaire__title">Samedi</h3>
+                        <p class="carte__horaire__desc">Performances de 12h à 22h</p>
+                    </div>
+                </div>
+                <div class="carte__horaire">
+                    <div class="horaire__calendrier">
+                        <p>D</p>
+                    </div>
+                    <div class="carte__desc__group">
+                        <h3 class="carte__horaire__title">Dimanche</h3>
+                        <p class="carte__horaire__desc">Performances de 14h à 21h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section Artiste -->
+        <div class="section">
+            <h2 class="section__title">Artistes</h2>
+        <!-- Carte Artiste -->
+            <div class="carte__artiste__group">
+                <div id="carte__artiste__vedette">
+                    <div class="carte__artiste__gris">
+                        <div>
+                            <p class="tag__vedette">En vedette</p>
+                        </div>
+                        <p>Artiste 1</p>
+                    </div>
+                    <div class="carte__artiste__blanc">
+                        <h3 class="carte__artiste__title">Bob l'artiste favori des médias numériques</h3>
+                        <p class="carte__artiste__genre">Genre: Pop</p>
+                    </div>
+                </div>
+                <div class="carte__artiste">
+                    <div class="carte__artiste__gris">
+                        <p>Artiste 2</p>
+                    </div>
+                    <div class="carte__artiste__blanc">
+                        <h3 class="carte__artiste__title">George l'artiste émergeant très prometteur</h3>
+                        <p class="carte__artiste__genre">Genre: Rock</p>
+                    </div>
+                </div>
+                <div class="carte__artiste">
+                    <div class="carte__artiste__gris">
+                        <p>Artiste 3</p>
+                    </div>
+                    <div class="carte__artiste__blanc">
+                        <h3 class="carte__artiste__title">Mélo Super Nova</h3>
+                        <p class="carte__artiste__genre">Genre: Jazz</p>
+                    </div>
+                </div>
+                <div class="carte__artiste">
+                    <div class="carte__artiste__gris">
+                        <p>Artiste 4</p>
+                    </div>
+                    <div class="carte__artiste__blanc">
+                        <h3 class="carte__artiste__title">Marie la Kid Synthétique</h3>
+                        <p class="carte__artiste__genre">Genre: Électro</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section Billets -->
+        <div class="section section__blue">
+            <h2 class="section__title">Billets</h2>
+            <div class="billet__group"> 
+                <div class="carte__billet">
+                    <p class="billet__logo">🎫</p>
+                    <p class="carte__billet__title">Standard</p>
+                    <p class="carte__billet__desc">$50</p>
+                </div>
+                <div class="carte__billet">
+                    <p class="billet__logo">🔖</p>
+                    <p class="carte__billet__title"> VIP</p>
+                    <p class="carte__billet__desc">$100</p>
+                </div>
+                <div class="carte__billet">
+                    <p class="billet__logo">🌟</p>
+                    <p class="carte__billet__title">Passeport 3 jours</p>
+                    <p class="carte__billet__desc">$120</p>
+                </div>
+            </div>
+        </div>
+        <!-- Section Partenaires -->
+        <div class="section">
+            <div>
+                <h2 class="section__title">Partenaires</h2>
+                <h3 class="part__sous__titre">Nos précieux partenaires.</h3>
+            </div>
+            <div class="part__group">
+                <div class="carte__part">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 62 62" fill="none" class="part__logo">
+                        <g clip-path="url(#clip0_29_7)">
+                            <path d="M51.6667 36.1666C54.5201 36.1666 56.8333 33.8534 56.8333 30.9999C56.8333 28.1464 54.5201 25.8333 51.6667 25.8333C48.8132 25.8333 46.5 28.1464 46.5 30.9999C46.5 33.8534 48.8132 36.1666 51.6667 36.1666Z" fill="#06D6A0"/>
+                            <path d="M10.3333 36.1666C13.1868 36.1666 15.5 33.8534 15.5 30.9999C15.5 28.1464 13.1868 25.8333 10.3333 25.8333C7.47987 25.8333 5.16667 28.1464 5.16667 30.9999C5.16667 33.8534 7.47987 36.1666 10.3333 36.1666Z" fill="#06D6A0"/>
+                            <path d="M31 56.8333C33.8535 56.8333 36.1667 54.5201 36.1667 51.6667C36.1667 48.8132 33.8535 46.5 31 46.5C28.1465 46.5 25.8333 48.8132 25.8333 51.6667C25.8333 54.5201 28.1465 56.8333 31 56.8333Z" fill="#06D6A0"/>
+                            <path d="M25.9625 22.1908L15.5775 11.7541H15.5517L14.7508 10.9275L11.0825 14.57L21.4675 25.0325L21.4933 25.0066L22.2942 25.8333L25.9625 22.1908ZM36.0194 22.2606L47.399 10.9146L51.0467 14.57L39.6671 25.9186L36.0194 22.2606ZM25.8592 39.68L22.1908 36.0375L11.78 46.3966L10.9533 47.2491L14.5958 50.8916L25.0067 40.5066L25.8592 39.68ZM51.0467 47.275L40.7392 36.9158L39.8092 36.0116L36.1667 39.6541L46.4742 50.0133L47.3783 50.9175L51.0467 47.275Z" fill="#06D6A0"/>
+                            <path d="M31 15.5001C33.8535 15.5001 36.1667 13.1869 36.1667 10.3334C36.1667 7.47994 33.8535 5.16675 31 5.16675C28.1465 5.16675 25.8333 7.47994 25.8333 10.3334C25.8333 13.1869 28.1465 15.5001 31 15.5001Z" fill="#06D6A0"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_29_7">
+                                <rect width="62" height="62" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    <p class="part__desc">Partenaire inc.</p>
+                </div>
+                <div class="carte__part">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 62 62" fill="none" class="part__logo">
+                        <g clip-path="url(#clip0_29_15)">
+                            <path d="M11.8575 17.7992C13.6658 15.965 15.4742 14.3117 16.275 14.6475C17.5667 15.1642 16.275 17.3083 15.5 18.5742C14.8542 19.6592 8.11167 28.6233 8.11167 34.875C8.11167 38.1817 9.35167 40.92 11.5733 42.5733C13.5108 44.02 16.0683 44.4592 18.3933 43.7617C21.1575 42.9608 23.4308 40.145 26.2983 36.6058C29.4242 32.7567 33.6092 27.7192 36.8383 27.7192C41.0492 27.7192 41.1008 30.3283 41.385 32.3433C31.62 33.9967 27.4867 41.8242 27.4867 46.2158C27.4867 50.6075 31.2067 54.1983 35.7792 54.1983C39.99 54.1983 46.8617 50.7625 47.895 38.44H54.25V31.9817H47.8692C47.4817 27.7192 45.0533 21.1317 37.4583 21.1317C31.6458 21.1317 26.66 26.0658 24.6967 28.4683C23.1983 30.3542 19.375 34.875 18.7808 35.495C18.135 36.27 17.0242 37.665 15.9133 37.665C14.7508 37.665 14.0533 35.5208 14.9833 32.705C15.8875 29.8892 18.6 25.3167 19.7625 23.6117C21.7775 20.6667 23.1208 18.6517 23.1208 15.1383C23.1208 9.5325 18.8842 7.75 16.6367 7.75C13.2267 7.75 10.2558 10.3333 9.61 10.9792C8.68 11.9092 7.905 12.6842 7.33667 13.3817L11.8575 17.7992ZM35.8567 47.9208C35.0558 47.9208 33.945 47.2492 33.945 46.0608C33.945 44.5108 35.8308 40.3775 41.3592 38.9308C40.5842 45.88 37.665 47.9208 35.8567 47.9208Z" fill="#06D6A0"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_29_15">
+                                <rect width="62" height="62" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <p class="part__desc">Précieux et investit</p>
+                </div>
+                <div class="carte__part">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 62 62" fill="none" class="part__logo">
+                        <g clip-path="url(#clip0_29_19)">
+                            <path d="M54.25 20.6667C50.5042 20.6667 48.4117 24.3867 49.2642 27.1509L40.0933 36.3476C39.3183 36.1151 38.1817 36.1151 37.4067 36.3476L30.8192 29.7601C31.6975 26.9959 29.605 23.2501 25.8333 23.2501C22.0875 23.2501 19.9692 26.9701 20.8475 29.7601L9.06751 41.5142C6.30334 40.6617 2.58334 42.7542 2.58334 46.5001C2.58334 49.3417 4.90834 51.6667 7.75001 51.6667C11.4958 51.6667 13.5883 47.9467 12.7358 45.1826L24.49 33.4026C25.265 33.6351 26.4017 33.6351 27.1767 33.4026L33.7642 39.9901C32.8858 42.7542 34.9783 46.5001 38.75 46.5001C42.4958 46.5001 44.6142 42.7801 43.7358 39.9901L52.9325 30.8192C55.6967 31.6717 59.4167 29.5792 59.4167 25.8334C59.4167 22.9917 57.0917 20.6667 54.25 20.6667Z" fill="#06D6A0"/>
+                            <path d="M38.75 23.25L41.1783 17.9025L46.5 15.5L41.1783 13.0975L38.75 7.75L36.3733 13.0975L31 15.5L36.3733 17.9025L38.75 23.25Z" fill="#06D6A0"/>
+                            <path d="M9.04168 28.4167L10.3333 23.25L15.5 21.9583L10.3333 20.6667L9.04168 15.5L7.75001 20.6667L2.58334 21.9583L7.75001 23.25L9.04168 28.4167Z" fill="#06D6A0"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_29_19">
+                                <rect width="62" height="62" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <p class="part__desc">Une compagnie qui investit</p>
+                </div>
+                <div class="carte__part">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 62 62" fill="none" class="part__logo">
+                        <g clip-path="url(#clip0_29_28)">
+                            <path d="M54.25 56.8074L31 2.58325L7.75 56.8074L25.8333 56.8333L31 18.0833L36.1667 56.8333L54.25 56.8074Z" fill="#06D6A0"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_29_28">
+                                <rect width="62" height="62" fill="white" transform="translate(2.71011e-06 62) rotate(-90)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <p class="part__desc">Super partenaire</p>
+                </div>
+            </div>  
+        </div>
+        <!-- Section Témoignages -->
+       <div class="section__temoi section__blue">
+            <div class="temoi__title__group">
+                <h2 class="section__title">Témoignages</h2>
+                <p class="temoi__desc">Écoutez ce que les gens disent</p>
+            </div>
+            <div class="temoi__carte__group">
+                <div class="temoi__carte">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="74" height="74" viewBox="0 0 74 74" fill="none" class="temoi__logo">
+                            <g clip-path="url(#clip0_30_2)">
+                                <path d="M37 36.9999C43.8142 36.9999 49.3333 31.4808 49.3333 24.6666C49.3333 17.8524 43.8142 12.3333 37 12.3333C30.1858 12.3333 24.6667 17.8524 24.6667 24.6666C24.6667 31.4808 30.1858 36.9999 37 36.9999ZM37 43.1666C28.7675 43.1666 12.3333 47.2983 12.3333 55.4999V61.6666H61.6667V55.4999C61.6667 47.2983 45.2325 43.1666 37 43.1666Z" fill="#073B4C"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_30_2">
+                                    <rect width="74" height="74" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="temoi__nom">Anne</h3>
+                        <p class="temoi__carte__desc">Un festival incroyable avec une ambiance électrisante!</p>
+                    </div>
+                </div>
+                <div class="temoi__carte">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="74" height="74" viewBox="0 0 74 74" fill="none" class="temoi__logo" class="temoi__logo">
+                            <g clip-path="url(#clip0_30_2)">
+                                <path d="M37 36.9999C43.8142 36.9999 49.3333 31.4808 49.3333 24.6666C49.3333 17.8524 43.8142 12.3333 37 12.3333C30.1858 12.3333 24.6667 17.8524 24.6667 24.6666C24.6667 31.4808 30.1858 36.9999 37 36.9999ZM37 43.1666C28.7675 43.1666 12.3333 47.2983 12.3333 55.4999V61.6666H61.6667V55.4999C61.6667 47.2983 45.2325 43.1666 37 43.1666Z" fill="#073B4C"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_30_2">
+                                    <rect width="74" height="74" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="temoi__nom">Marco</h3>
+                        <p class="temoi__carte__desc">Des artistes de haut niveau et une organisation parfaite.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section Contact -->
+       <div class="section__contact">
+            <div class="contact__title__group">
+                <h2 class="section__title">Contact</h2>
+                <p class="contact__desc">Nous aimerions avoir de vos nouvelles!</p>
+            </div>
+            <div class="contact__carte__group">
+                <div class="carte__contact">
+                    <h3 class="contact__nom">Nom</h3>
+                    <p class="contact__reponse">Entrez votre nom</p>
+                </div>
+                <div class="carte__contact">
+                    <h3 class="contact__nom">Email</h3>
+                    <p class="contact__reponse">Entrez votre email</p>
+                </div>
+                <div class="carte__contact">
+                    <h3 class="contact__nom">Message</h3>
+                    <p class="contact__reponse">Écrivez votre message ici</p>
+                </div>
+                <div class="contact__bouton">
+                    <button id="contact__bouton__blanc">Annuler</button>
+                    <button id="contact__bouton__bleu">Envoyer</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <ul class="footer__group">
+                <li><button class="button__yellow">Obtenez vos Billets</button></li>
+                <li><a href="#" class="footer__desc">Politique de confidentialité</a></li>
+                <li><a href="#" class="footer__desc">Conditions d'utilisation</a></li>
+                <li><a href="#" class="footer__desc">© 2023 Festival Lumière Urbaine</a></li>
+            </ul>
+    </nav>
+    </footer>
+</body>
+</html>
+

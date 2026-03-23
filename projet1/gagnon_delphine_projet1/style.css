@@ -1,0 +1,1006 @@
+:root {
+/* Variables de couleur */
+--primary-color: #118AB2;
+--secondary-color: #073B4C;
+--third-color: #06D6A0;
+--yellow: #FFD166;
+--grey: rgba(255, 255, 255, 0.73);
+--darker-grey: rgba(217, 217, 217, 0.50);
+--white: #fff; 
+--very-transparent-black: rgba(0, 0, 0, 0.05);
+--transparent-black: rgba(0, 0, 0, 0.10);
+--less-transparent-black: rgba(0, 0, 0, 0.5);
+--black: #000;
+--bleu-gris: #D0DBEB;
+--light-grey: #D9D9D980;
+}
+
+body {
+    margin: 0;
+}
+    /* composants réutilisable, ne s'applique pas juste à une section particulière */
+.section /* style de la section en général */{
+    display: flex;
+    padding: 60px 170px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+}
+
+.section__title /* titre de la section */{
+    color: var(--secondary-color);
+    text-align: center;
+    font-family: Monoton;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    margin: 0;
+}
+
+.section__blue {
+    /* couleur de fond bleu pour les sections */
+    background-color: var(--primary-color);
+}
+
+.button__yellow {
+    /* bouton jaune */
+    text-align: center;
+    background-color: var(--yellow); 
+    font-family: Roboto;
+    border-radius: 4px;
+    padding: 10px 16px; 
+}
+    /* NAVBAR + HEADER */
+/* 
+Header - Header 
+Utilisation:
+*<header>
+        <div class="logo">
+            <p class="logo__name">LUM.UR</p>
+            <p class="logo__sous-titre">Lumière urbaine</p>
+        </div>
+    <nav>
+            <ul class="navbar">
+                <li><a href="#">Programmation</a></li>
+                <li><a href="#">Horaire</a></li>
+                <li><a href="#">Artistes</a></li>
+                <li><a href="#">Billets</a></li>
+                <li><a href="#">Partenaires</a></li>
+                <li><a href="#">Témoignages</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+    </nav>
+       <button class="button__yellow">Obtenez vos Billets</button>
+    </header>
+Éléments :
+logo__name : nom du logo
+logo__sous-titre : sous-titre du logo
+navbar : navbar
+button__yellow : bouton jaune
+ */
+header {
+    /* style du header */
+    display: flex;
+    height: 80px;
+    padding: 10px 60px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    background-color: var(--secondary-color);
+}
+
+
+.logo {
+    /* logo à gauche du header */
+    display: flex;
+    flex-direction: column;
+}
+
+.logo__name {
+    /* nom du logo */
+    margin: 0;
+    color: var(--third-color);
+    text-shadow: 0 0 6.2px var(--grey);
+    font-family: Monoton;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.logo__sous-titre {
+    /* nom de la compagnie affiché sous le logo */
+    margin: 0;
+    color: var(--color-secondary) var(--third-color);
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; 
+    letter-spacing: 0.54px;
+}
+/* Navbar - Navbar
+Utilisation:
+<ul class="navbar">
+    <li><a href="#">Programmation</a></li>
+    <li><a href="#">Horaire</a></li>
+    <li><a href="#">Artistes</a></li>
+    <li><a href="#">Billets</a></li>
+    <li><a href="#">Partenaires</a></li>
+    <li><a href="#">Témoignages</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+
+Elements:
+<li><a href="#">Programmation</a></li> : lien clicable dans la navbar
+*/
+.navbar {
+    /* navbar au milieu du header */
+    display: flex;
+    padding: 2px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex: 1 0 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a {
+    /* style du texte dans la navbar */
+    color: var(--white);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    text-decoration: none;
+}
+
+    /* Section HERO */
+
+/* 
+section__hero - Premiere section
+
+Utilisation:
+    <div class="section__hero">
+            <h1 class="hero__title">LUMIÈRE.URBAINE</h1>
+            <p class="hero__desc">3 jours de musique et d'art immersif.</p>
+            <div class="hero__button__group">
+                <button class="hero__button" id="hero__button__border">En savoir plus</button>
+                <button class="hero__button" id="hero__button__primary">Acheter des billets</button>
+            </div>
+    </div>
+
+Elements :
+hero__title: titre de la section
+hero__desc : sous-titre de la section hero
+hero__button__group : boutons sous le titre de la section hero
+hero__button : style du bouton
+
+Modificateur:
+hero__button__border : bordure de couleur differente
+hero__button__primary : couleur du bouton differente
+</div>
+*/
+.section__hero {
+    /* style de la première section */
+    background-image: url(./images/Hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 729px;
+    padding: 60px;
+    gap: 60px;
+    align-self: stretch;
+    flex: 1 0 0;
+}
+
+.hero__title {
+    /* gros titre à droite de la section hero */
+    color: var(--white);
+    text-shadow: 0 0 5.7px var(--third-color), 0 0 33.9px var(--third-color);
+    font-family: Monoton;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    margin: 0;
+}
+
+.hero__desc {
+    /* sous-titre de la section hero */
+    color: var(--white);
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    margin: 0;
+}
+
+.hero__button__group {
+    /* bouton sous le titre de la section hero */
+    display: flex;
+    gap: 12px;
+}
+
+.hero__button {
+    /* style des boutons de la section hero */
+    width: 240px;
+    padding: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px; 
+    color: var(--white);
+    box-shadow: none;
+}
+
+#hero__button__border {
+    /* modificateur de bouton de la section hero */
+    border: 1px solid var(--white);
+    background: var(--less-transparent-black);
+}
+
+#hero__button__primary {
+    background: var(--primary-color);
+}
+
+    /* Section2 PROGRAMMATION */
+/*
+carte__prog - Carte de la section Programmation
+
+Utilisation:
+<div class="carte__prog">
+    <div class="carte__prog__gris">
+    <p class="carte__prog__label">Jour 1</p>
+    <p class="prog__date__festival">Vendredi festival</p>
+</div>
+<div class="carte__prog__blanc">
+    <h3 class="carte__prog__title">Vendredi</h3>
+    <p class="carte__prog__desc">Liste des performances du vendredi</p>
+</div>
+Elements:
+carte__prog__gris : partie grise de la carte
+carte__prog__label : petit tag en haut a gauche
+prog__date__festival : texte dans le carre gris
+carte__prog__blanc : partie blanche de la carte
+carte__prog__title : titre de la carte
+carte__prog__desc : description de la carte
+*/
+.carte__prog__group {
+    /* groupe regroupant les cartes de la section prog */
+    display: flex;
+    gap: 40px;
+    width: 1159px;
+    height: 420px;
+}
+
+.carte__prog {
+    /* style des cartes de la section prog */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 0;
+    border-radius: 6px;
+    border: 1px solid var(--transparent-black);
+}
+
+.carte__prog__gris {
+    /* carrée gris visible dans la carte de la section prog */
+    flex: 1 0 0;
+    align-self: stretch;
+    background: var(--light-grey);
+    display: flex;
+    gap: 20%;
+}
+
+.carte__prog__blanc {
+    /* rectangle blanc visible dans la carte de la section prog */
+    display: flex;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    align-self: stretch;
+}
+    /* petit problème de margin pour tout les éléments suivant */
+.carte__prog__title {
+    margin: 0;
+}
+
+.carte__prog__desc {
+    margin: 0;
+}
+
+.carte__prog__label {
+    margin: 0;
+}
+
+.carte__prog__label {
+    /* jour affiché en haut à gauche de la carte de la section prog (carrée jaune)*/
+    width: 40px;
+    height: 16px;
+    padding: 4px 8px;
+    background-color: var(--yellow);
+    border-radius: 6px 0;
+}
+
+
+.prog__date__festival {
+    /* texte affiché dans "l'image" de la carte de la section prog (carrée gris) */
+    display: flex;
+    align-items: center;
+    color: var(--black);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.carte__prog__title {
+    /* h3 qui indique la date de la carte de section prog */
+    color: var(--secondary-color);
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.carte__prog__desc {
+    /* sous-titre du h3 qui indique la date */
+    color: var(--primary-color);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+    /* Section HORAIRE */
+/* 
+carte__horaire - carte de la sction horaire
+
+Utilisation:
+<div class="carte__horaire">
+    <div class="horaire__calendrier">
+        <p>V</p>
+    </div>
+    <div class="carte__desc__group">
+        <h3 class="carte__horaire__title">Vendredi</h3>
+        <p class="carte__horaire__desc">Performances de 15h à 23h.</p>
+    </div>
+</div>
+
+Elements:
+horaire__calendrier : petit calendrier dans la carte 
+carte__desc__group : div qui regroupe la partie description dans la carte
+carte__horaire__title : titre de la carte
+carte__horaire__desc : description de la carte
+*/
+.section__horaire {
+    /* style de la carte horaire en général */
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 60px 170px;
+    align-items: center;
+    gap: 60px;
+}
+
+.horaire__title__group {
+    /* groupe (div) qui regroupe le texte à gauche de la section horaire */
+    justify-content: flex-start;
+    width: 550px;
+}
+
+.horaire__carte__group {
+    /* groupe (div) qui regroupe les carte à gauche de la section horaire */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 476px;
+    width: 550px;
+    gap: 40px;
+}
+
+.section__horaire__title {
+    /* titre spécifique à la section horaire à cause d'òu il est placé */
+    color: var(--black);
+    font-family: Monoton;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+}
+
+.horaire__desc {
+    /* sous-titre de la section horaire */
+    color: var(--black);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.carte__horaire {
+    /* carte dans la section horaire */
+    display: flex;
+    padding: 16px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1 0 0;
+    border-radius: 6px;
+    border: 1px solid var(--transparent-black);
+    background: var(--white);
+}
+
+.horaire__calendrier {
+    /* calendrier à gauche de la carte dans la section horaire */
+    display: flex;
+    padding: 13px 16.5px 17px 13.5px;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background: var(--bleu-gris);
+    border-radius: 4px;
+    font-family: Monoton;
+    color: var(--primary-color);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.carte__desc__group {
+    /* div qui regroupe le texte à droite de la carte de la section horaire */
+    display: flex;
+    flex-direction: column;
+}
+
+.carte__horaire__title {
+    /* h3 qui affichre la journée sur la carte de la section horaire */
+    margin: 0;
+    color: var(--secondary-color);
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.carte__horaire__desc {
+    /* sous-titre de la carte de la section horaire */
+    margin: 0;
+    color: var(--secondary-color);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+    /* Section ARTISTES */
+/* 
+carte__artiste - Carte de la section Artiste
+
+Utilisation:
+<div class="carte__artiste">
+    <div class="carte__artiste__gris">
+        <p>Artiste 2</p>
+    </div>
+<div class="carte__artiste__blanc">
+    <h3 class="carte__artiste__title">George l'artiste émergeant très prometteur</h3>
+    <p class="carte__artiste__genre">Genre: Rock</p>
+    </div>
+</div>
+
+Elements:
+carte__artiste__gris : partie grise de la carte
+carte__artiste__blanc : partie blanche de la carte
+carte__artiste__blanc : titre de la carte
+carte__artiste__genre : sous-titre de la carte
+*/
+.carte__artiste__group {
+    /* div qui regroupe l'ensemble des cartes de la section artistes */
+    display: flex;
+    gap: 40px;
+}
+
+.carte__artiste__gris {
+    /* parties grise de la carte de la section artiste ("l'image" suppérieure) */
+    display: flex;
+    padding: 0 15.667px 0 16px;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    background: var(--darker-grey);
+    width: auto;
+    height: 245px;
+}
+
+.carte__artiste__blanc {
+    /* partie blanche de la carte de la section artiste ( partie inférieure à l'image) */
+    display: flex;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.carte__artiste {
+    /* bordures spécifiques pour les cartes de la section artiste */
+    border-radius: 6px;
+    border: 2px solid var(--primary-color);
+}
+
+.carte__artiste__title {
+    /* h3 de la section blanche de la carte */
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--secondary-color);
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    width: 223px;
+    height: 72px;
+    margin: 0;
+}
+
+.carte__artiste__genre {
+    /* sous-titre qui parle du genre de musique  */
+    color: var(--primary-color);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 175%;
+    margin: 0;
+}
+
+#carte__artiste__vedette {
+    /* spécificitées de la carte en vedette à gauche */
+    width: 264px;
+    border-radius: 6px;
+    border: 5px solid var(--yellow);
+    position: relative;
+}
+
+.tag__vedette {
+    /* tag jaune en haut à gauche de la carte en vedette */
+    margin: 0;
+    display: flex;
+    padding: 7px 18px;
+    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 11px;
+    top: 12px;
+    border-radius: 5px;
+    background: var(--yellow);
+}
+
+    /* section BILLET */
+/*
+carte__billet - Carte de la section Billets
+
+Utilisation :
+<div class="carte__billet">
+    <p class="billet__logo">🎫</p>
+    <p class="carte__billet__title">Standard</p>
+    <p class="carte__billet__desc">$50</p>
+</div>
+
+Elements : 
+billet__logo : emoji du logo
+carte__billet__title : titre du billet
+carte__billet__desc : description du billet
+*/
+.billet__group {
+    /* div qui regroupe les 3 types de billets de la section billets */
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.carte__billet {
+    /* style de la div des billets */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 360px;
+    height: 184px;
+    gap: 10px;
+}
+
+.carte__billet__title {
+    /* titre des billets */
+    color: var(--black);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 117%;
+    margin: 0;
+}
+
+.carte__billet__desc {
+    /* description du prix du billet */
+    align-self: stretch;
+    color: var(--black);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 129%;
+    margin: 0;
+}
+
+.billet__logo {
+    /* petit cercle avec l'image du billet */
+    display: flex;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 62.5px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    margin: 0;
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Section PARTENAIRES */
+
+/* carte__part - carte de la section Partenaires 
+
+<div class="carte__part">
+    <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 62 62" fill="none" class="part__logo">
+        <g clip-path="url(#clip0_29_7)">
+            <path d="M51.6667 36.1666C54.5201 36.1666 56.8333 33.8534 56.8333 30.9999C56.8333 28.1464 54.5201 25.8333 51.6667 25.8333C48.8132 25.8333 46.5 28.1464 46.5 30.9999C46.5 33.8534 48.8132 36.1666 51.6667 36.1666Z" fill="#06D6A0"/>
+            <path d="M10.3333 36.1666C13.1868 36.1666 15.5 33.8534 15.5 30.9999C15.5 28.1464 13.1868 25.8333 10.3333 25.8333C7.47987 25.8333 5.16667 28.1464 5.16667 30.9999C5.16667 33.8534 7.47987 36.1666 10.3333 36.1666Z" fill="#06D6A0"/>
+            <path d="M31 56.8333C33.8535 56.8333 36.1667 54.5201 36.1667 51.6667C36.1667 48.8132 33.8535 46.5 31 46.5C28.1465 46.5 25.8333 48.8132 25.8333 51.6667C25.8333 54.5201 28.1465 56.8333 31 56.8333Z" fill="#06D6A0"/>
+            <path d="M25.9625 22.1908L15.5775 11.7541H15.5517L14.7508 10.9275L11.0825 14.57L21.4675 25.0325L21.4933 25.0066L22.2942 25.8333L25.9625 22.1908ZM36.0194 22.2606L47.399 10.9146L51.0467 14.57L39.6671 25.9186L36.0194 22.2606ZM25.8592 39.68L22.1908 36.0375L11.78 46.3966L10.9533 47.2491L14.5958 50.8916L25.0067 40.5066L25.8592 39.68ZM51.0467 47.275L40.7392 36.9158L39.8092 36.0116L36.1667 39.6541L46.4742 50.0133L47.3783 50.9175L51.0467 47.275Z" fill="#06D6A0"/>
+            <path d="M31 15.5001C33.8535 15.5001 36.1667 13.1869 36.1667 10.3334C36.1667 7.47994 33.8535 5.16675 31 5.16675C28.1465 5.16675 25.8333 7.47994 25.8333 10.3334C25.8333 13.1869 28.1465 15.5001 31 15.5001Z" fill="#06D6A0"/>
+        </g>
+        <defs>
+            <clipPath id="clip0_29_7">
+                <rect width="62" height="62" fill="white"/>
+            </clipPath>
+        </defs>
+    </svg>
+    <p class="part__desc">Partenaire inc.</p>
+</div>
+
+Elements : 
+part__logo : logo de la carte
+part__desc : description de la carte
+*/
+.part__sous__titre {
+    /* sous titre de la section partenaires*/
+    color: var(--black);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.part__group {
+    /* div qui regroupe les différentes "cartes" (cercle avec image + texte) de la section partenaires*/
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.carte__part {
+    /* style de la carte de la section partenaires */
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    height: 148px;
+    gap: 20px;
+}
+
+.part__logo {
+    /* logo de la carte dans le cercle gris */
+    display: flex;
+    width: 62px;
+    height: 62px;
+    padding: 19px 18.875px 19px 19.125px;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    background: var(--very-transparent-black);
+}
+
+.part__desc {
+    /* description de la carte (texte sous le logo dans le cercle gris) */
+    color: var(--black);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+    /* Section TEMOIGNAGES */
+/*
+temoi__carte - carte de la section Temoignages 
+
+Utilisation : 
+<div class="temoi__carte">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="74" height="74" viewBox="0 0 74 74" fill="none" class="temoi__logo">
+            <g clip-path="url(#clip0_30_2)">
+                <path d="M37 36.9999C43.8142 36.9999 49.3333 31.4808 49.3333 24.6666C49.3333 17.8524 43.8142 12.3333 37 12.3333C30.1858 12.3333 24.6667 17.8524 24.6667 24.6666C24.6667 31.4808 30.1858 36.9999 37 36.9999ZM37 43.1666C28.7675 43.1666 12.3333 47.2983 12.3333 55.4999V61.6666H61.6667V55.4999C61.6667 47.2983 45.2325 43.1666 37 43.1666Z" fill="#073B4C"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_30_2">
+                    <rect width="74" height="74" fill="white"/>
+                </clipPath>
+            </defs>
+        </svg>
+    </div>
+    <div>
+        <h3 class="temoi__nom">Anne</h3>
+        <p class="temoi__carte__desc">Un festival incroyable avec une ambiance électrisante!</p>
+    </div>
+</div>
+
+Elements : 
+temoi__logo : logo des carte temoignages
+temoi__nom : nom de la personne qui temoigne
+temoi__carte__desc : description du temoignage
+*/
+.section__temoi {
+    /* style de section spécifique à la section témoignages */
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 60px 170px;
+  align-items: center;
+  gap: 60px;
+}
+
+.temoi__title__group {
+    /* div qui regroupe le titre et sous-titre de la section témoignages */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  width: 518px;
+}
+
+.temoi__desc {
+    color: var(--black);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin: 0;
+}
+.temoi__carte__group {
+    /* div qui regroupe les cartes de la section témoignages */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+ 
+.temoi__carte {
+    /* style de carte dans la section témoignages */
+  display: flex;
+  width: 518px;
+  height: 100px;
+  padding: 16px;
+  background: var(--white);
+  gap: 16px;
+}
+ 
+.temoi__logo {
+    /* logo dans la carte */
+  display: flex;
+  padding: 13px 12.5px 13px 13.5px;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  background: var(--grey);
+}
+ 
+.temoi__nom {
+    /* h3 qui indique le nom de la perrsonne dans la carte de la section témoignages */
+    color: var(--secondary-color);
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    margin: 0;
+}
+ 
+.temoi__carte__desc {
+    /* description sous le h3 de la carte de la section témoignages */
+    color: var(--secondary-color);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin: 0;
+}
+
+/* Section CONTACT */
+
+/*
+carte__contact - Carte de la classe contact 
+
+Utilisation : 
+<div class="carte__contact">
+    <h3 class="contact__nom">Nom</h3>
+    <p class="contact__reponse">Entrez votre nom</p>
+</div>
+
+Elements : 
+contact__nom : titre en haut de la section pour ecrire
+contact__reponse : ce qui est ecrit comme background de la section pour ecrire 
+*/
+.section__contact {
+  display: flex;
+  justify-content: center;
+  padding: 60px 170px;
+  align-items: flex-start;
+  gap: 60px;
+}
+ 
+.contact__title__group {
+    /* div qui regroupe les element pour le titre */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  width: 518px;
+  height: 304px;
+}
+ 
+.contact__desc {
+    /* sous-titre de la section contact */
+  color: var(--secondary-color);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 0;
+}
+ 
+.contact__carte__group {
+    /* div qui regroupe les cartes de la classe contact*/
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 550px;
+  height: 348px;
+}
+ 
+.carte__contact {
+    /* carte de la section contact */
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  height: 60px;
+}
+ 
+.contact__nom {
+    /*titre en haut de la section pour ecrire*/
+  color: var(--secondary-color);
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 143%;
+  margin: 0;
+}
+ 
+.contact__reponse {
+    /* text de fond ou l'on peut ecrire notre reeponse*/
+  display: flex;
+  padding: 8px 12px;
+  align-items: center;
+  gap: 4px;
+  border-radius: 6px;
+  border: 1px solid var(--transparent-black);
+  background: var(--white);
+  color: var(--less-transparent-black);
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 143%;
+  margin: 0;
+}
+ 
+.contact__bouton {
+    /* bouton de la section contact */
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+ 
+#contact__bouton__blanc {
+    /* modificateur du bouton - version blanche et bordure bleu */
+    display: flex;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--secondary-color);
+    width: 245px;
+    height: 24px;
+    background-color: var(--white);
+}
+ 
+#contact__bouton__bleu {
+    /*modificateur du bouton - version bleu */
+    display: flex;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--secondary-color);
+    width: 245px;
+    height: 24px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+/* Section FOOTER */
+
+.footer__group {
+    /* div qui regroupe les éléments du footer */
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: Roboto;
+    background-color: var(--secondary-color);
+    padding: 60px 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+    margin: 0;
+}
+
+
+
+
+   
